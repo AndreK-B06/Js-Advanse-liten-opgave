@@ -8,7 +8,6 @@ const quote = [
 /* ---------------------
 !!! Get HTML Eliment !!!
 -----------------------*/
-console.log(quote);
 const buttonGivQuotes = document.getElementById("give-q");
 const buttonRemoveQuotes = document.getElementById("remove-q");
 let newQuote = document.getElementById("text-id");
@@ -20,9 +19,6 @@ buttonGivQuotes.addEventListener("click", giveQuotes);
 function giveQuotes() {
   let randomQuote = Math.floor(Math.random() * quote.length);
   newQuote.innerHTML += `<p>${quote[randomQuote]}</p>`;
-  console.log(newQuote);
-
-  return newQuote;
 }
 /* --------------
 ! Remove Quotes !
@@ -30,5 +26,5 @@ function giveQuotes() {
 buttonRemoveQuotes.addEventListener("click", removeQuotes);
 
 function removeQuotes() {
-  return (newQuote.textContent = "");
+  newQuote.textContent = "";
 }
